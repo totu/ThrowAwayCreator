@@ -1,7 +1,7 @@
 # ThrowAwayCreator
 Python script for easily creating throwaway accounts with random username, password and email
 
-![image](https://dl.dropboxusercontent.com/u/28304305/tac_example.png)
+<img src="https://dl.dropboxusercontent.com/u/28304305/tac_example.png" width=300>
 
 ## How to use?
 1. Get free API key from [Mailinator](https://mailinator.com/)
