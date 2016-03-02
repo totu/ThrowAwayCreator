@@ -77,11 +77,11 @@ class Throwaway_creator:
     def create_id(self):
         """New ID generator
 
-		Main method of the class. Uses random string generator to genrate
-		"unique" username, password, and email address (email will always
-		end with 'mailinator.com'). Calls write_data method with generated
-		strings to draw them on screen. Adds buttons on screen for easier
-		copying of randomized data.
+        Main method of the class. Uses random string generator to genrate
+        "unique" username, password, and email address (email will always
+        end with 'mailinator.com'). Calls write_data method with generated
+        strings to draw them on screen. Adds buttons on screen for easier
+        copying of randomized data.
         """
         # Randomize data
         username = self.random_str()
@@ -95,17 +95,17 @@ class Throwaway_creator:
         self.email_copy.pack(in_=self.email_frame, side='right')
 
     def get_mail(self):
-		"""Mail fetcher
+        """Mail fetcher
 
-		Fetches mail from email address stored in self.box variable. Method
-		checks if box has mail or not. If email is found latest email will
-		be shown on the screen, otherwise text "Box is empty" is shown.
+        Fetches mail from email address stored in self.box variable. Method
+        checks if box has mail or not. If email is found latest email will
+        be shown on the screen, otherwise text "Box is empty" is shown.
 
-		This is necessary functionality since some forums, websites, etc
-		require email verification inorder to activate your new account.
-		With this functionality you there is no need to open mailinator's
-		webmail for activation link.
-		"""
+        This is necessary functionality since some forums, websites, etc
+        require email verification inorder to activate your new account.
+        With this functionality you there is no need to open mailinator's
+        webmail for activation link.
+        """
         mail_box = self.box
         self.inbox.get(mailbox=mail_box)
         count = self.inbox.count()
@@ -122,40 +122,40 @@ class Throwaway_creator:
         self.message.insert(END, text)
         self.subject.insert(END, subj)
 
-		"""
-		TODO: These copy methods should probably just be one method instead of
-		three separate ones
-		"""
+        """
+        TODO: These copy methods should probably just be one method instead of
+        three separate ones
+        """
     def cp_username(self):
-		"""Copies username from username field into clipboard"""
+        """Copies username from username field into clipboard"""
         self.root.clipboard_clear()
         text = self.username_text.get(1.0,END)[:-1]
         self.root.clipboard_append(text)
 
     def cp_password(self):
-		"""Copies password from username field into clipboard"""
+        """Copies password from username field into clipboard"""
         self.root.clipboard_clear()
         text = self.password_text.get(1.0,END)[:-1]
         self.root.clipboard_append(text)
 
     def cp_email(self):
-		"""Copies email from username field into clipboard"""
+        """Copies email from username field into clipboard"""
         self.root.clipboard_clear()
         text = self.email_text.get(1.0,END)[:-1]
         self.root.clipboard_append(text)
 
     def create_window(self):
-		"""Window generator
+        """Window generator
 
-		This method creates the actual Tkinter window. I don't know what to say
-		it creates few frames and bunch of buttons and junk. Tkinter's docs
-		are probably necessary to understand this unless you are l33t h4x0r.
+        This method creates the actual Tkinter window. I don't know what to say
+        it creates few frames and bunch of buttons and junk. Tkinter's docs
+        are probably necessary to understand this unless you are l33t h4x0r.
 
-		Docs:
-			https://docs.python.org/3/library/tk.html
+        Docs:
+            https://docs.python.org/3/library/tk.html
 
-		There you go, enjoy. Sorry.
-		"""
+        There you go, enjoy. Sorry.
+        """
         # GUI stuff
         self.root = Tk()
         self.root.wm_title('Throwaway creator')
@@ -179,11 +179,11 @@ class Throwaway_creator:
         self.message = Text(self.root, height=10, width=47, highlightthickness=0, border=1)
 
     def draw_window(self):
-		"""Draw window
+        """Draw window
 
-		This method draws the window created in the above window generator.
-		Again pretty basic Tkinter stuff.
-		"""
+        This method draws the window created in the above window generator.
+        Again pretty basic Tkinter stuff.
+        """
         # Main GUI
         self.user_frame.pack()
         self.password_frame.pack()
